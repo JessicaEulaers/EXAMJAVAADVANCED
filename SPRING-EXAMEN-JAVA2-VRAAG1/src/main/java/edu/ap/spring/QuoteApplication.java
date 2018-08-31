@@ -24,4 +24,7 @@ public class QuoteApplication {
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(QuoteApplication.class).headless(false).run(args);
 	}
+	
+	
+
 }
