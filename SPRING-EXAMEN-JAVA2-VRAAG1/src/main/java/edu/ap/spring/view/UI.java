@@ -23,25 +23,23 @@ public class UI implements InitializingBean {
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		System.setProperty("java.awt.headless", "false");
-		JFrame frame = new JFrame("Quotes");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+		JFrame frame1 = new JFrame("LEZEN ");
+		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame1.setSize(400, 400);
         
         
 		JButton buttonP = new JButton("Press");
-		DALConnection.getInstance().connect();
-        
-
-        ArrayList<Quote> Quotes = DALQuotes.getInstance().getQuotes(id);
-       
-        
-        for(Quote s : Quotes) {
-        		System.out.println(s.toString());
-        		buttonP = 
-        }
-        
-		frame.getContentPane().add(buttonP);
-		frame.setVisible(true);
 		
+        
+		frame1.getContentPane().add(buttonP);
+		frame1.setVisible(true);
+		
+		JFrame frame2 = new JFrame("OPVRAGEN");
+		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.setSize(400, 400);
+        
+        JFrame frame3 = new JFrame("ZOEKEN");
+		frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame3.setSize(400, 400);
 	}
 }
